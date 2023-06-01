@@ -9,14 +9,10 @@ const bookSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  description: {
-    type: String,
-    default: ''
-  },
-  publishedYear: {
-    type: Number,
-    default: null
-  }
+  description: String,
+  publishedYear: Number
 });
 
-module.exports = mongoose.model('Book', bookSchema);
+const Book = mongoose.model('Book', bookSchema);
+
+module.exports = Book;
